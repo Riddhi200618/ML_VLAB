@@ -50,3 +50,7 @@ node verify-design.cjs
 
 The existing ChatGPT Sites publication is separate; GitHub pushes deploy to GitHub Pages.
 `n## Python trained model`nRun `python -m pip install -r ml/requirements.txt`, then `python ml/train.py` from the project root. The script fits a StandardScaler and SGDRegressor on 160 rows and evaluates on 40 untouched test rows (seed 42). Learned parameters, metrics and test predictions are exported to dist/models/sales-sgd.json. Open #trained-model on the site to demonstrate predictions. Browser inference uses the saved parameters; Python training is run locally. Training does not require a backend server.
+
+## Unified experiment
+Open #experiment for live gradient descent, learning-rate comparisons, live-weight sales predictions, and the saved Python model evaluation on one page. Old #demo, #practice and #trained-model bookmarks redirect to #experiment. The live TV-only optimizer and saved three-feature Python model are distinct; live settings affect only the live model.
+
