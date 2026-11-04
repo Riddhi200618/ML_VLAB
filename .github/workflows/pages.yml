@@ -26,6 +26,8 @@ jobs:
           node --check dist/app.js
           node verify.cjs
           node verify-design.cjs
+          node --check dist/trained-model.js
+          node verify-model.cjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:
@@ -33,3 +35,4 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+
